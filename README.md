@@ -63,23 +63,6 @@ Service Restart & Recovery
 
 ---
 
-## Project Structure
-├── prometheus/
-│ ├── prometheus.yml
-│ └── alert.rules.yml
-├── alertmanager/
-│ └── alertmanager.yml
-├── ansible/
-│ └── restart_node_exporter.yml
-├── scripts/
-│ ├── autoheal.sh
-│ └── webhook_server.py
-├── docker-compose.yml
-├── screenshots/
-└── README.md
-
----
-
 ## How It Works
 1. Prometheus continuously monitors services
 2. A service failure is detected (e.g., node_exporter stopped)
