@@ -1,0 +1,11 @@
+groups:
+- name: service-alerts
+  rules:
+  - alert: NodeExporterDown
+    expr: up{job="node_exporter"} == 0
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "Node Exporter is down"
+      description: "Node Exporter has been down for more than 30 seconds."
