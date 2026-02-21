@@ -1,0 +1,13 @@
+- name: Auto-heal node exporter service
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Restart node_exporter container
+      shell: docker start node_exporter
+      register: restart_output
+
+    - name: Show restart result
+      debug:
+        var: restart_output.stdout
