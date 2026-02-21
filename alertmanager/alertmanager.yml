@@ -1,0 +1,10 @@
+global:
+  resolve_timeout: 1m
+
+route:
+  receiver: "autoheal-receiver"
+
+receivers:
+- name: "autoheal-receiver"
+  webhook_configs:
+  - url: "http://localhost:5001/autoheal"
